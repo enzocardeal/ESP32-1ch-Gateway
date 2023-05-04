@@ -19,6 +19,9 @@
 // and transmit packages/messages.
 // ========================================================================================
 //
+#include "SSD1306Wire.h"
+
+//SSD1306Wire display(0x3c, OLED_SDA, OLED_SCL);
 
 #if OLED>=1
 

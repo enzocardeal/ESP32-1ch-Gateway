@@ -27,6 +27,7 @@
 // 0. No OLED connected
 // 1. 0.9" OLED (cheap)
 // 2. 1.3" OLED with much better and larger display
+#define UNUSE_PIN                   (0)
 
 #if OLED>=1										// If OLED is used
 
@@ -45,6 +46,11 @@
 #define OLED_SCL 15								// GPIO15 / 
 #define OLED_SDA 4								// GPIO4 / 
 #define OLED_RST 16								// Reset pin (Some OLED displays do not have it)
+
+#elif _PIN_OUT==5								// TTGO (onboard version used, also for DIY)
+#define OLED_SCL 22								// GPIO15 / 
+#define OLED_SDA 21								// GPIO4 / 
+#define OLED_RST UNUSE_PIN								// Reset pin (Some OLED displays do not have it)
 
 #endif
 

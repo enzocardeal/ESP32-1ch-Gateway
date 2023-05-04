@@ -43,7 +43,7 @@
 
 // Define the LoRa Frequncy band that is used. TTN Supported values are 915MHz, 868MHz and 433MHz.
 // So supported values are: 433 868 915
-#define _LFREQ 868
+#define _LFREQ 915
 
 // The spreading factor is the most important parameter to set for a single channel
 // gateway. It specifies the speed/datarate in which the gateway and node communicate.
@@ -52,7 +52,7 @@
 // This parameters contains the default value of SF, the actual version can be set with
 // the webserver and it will be stored in SPIFF
 // NOTE: The frequency is set in the loraModem.h file and is default 868.100000 MHz.
-#define _SPREADING SF9
+#define _SPREADING SF7
 
 // Channel Activity Detection
 // This function will scan for valid LoRa headers and determine the Spreading 
@@ -61,7 +61,7 @@
 // continuous listen mode.
 // Using this function means that we HAVE to use more dio pins on the RFM95/sx1276
 // device and also connect enable dio1 to detect this state. 
-#define _CAD 1
+#define _CAD 0
 
 // Definitions for the admin webserver.
 // A_SERVER determines whether or not the admin webpage is included in the sketch.
@@ -87,7 +87,7 @@
 //	4: ESP32 TTGO pinning (should work for 433 and OLED too).
 //	5: ESP32 TTGO EU433 MHz with OLED
 //	6: Other, define your own in loraModem.h
-#define _PIN_OUT 1
+#define _PIN_OUT 5
 
 // Gather statistics on sensor and Wifi status
 // 0= No statistics
@@ -135,7 +135,7 @@
 // OLED==0; No OLED display connected
 // OLED==1; 0.9 Oled Screen based on SSD1306
 // OLED==2;	1"3 Oled screens for Wemos, 128x64 SH1106
-#define OLED 2
+#define OLED 1
 
 
 // Define whether we want to manage the gateway over UDP (next to management 
@@ -193,8 +193,8 @@
 
 // Gateway Ident definitions
 #define _DESCRIPTION "ESP Gateway"			// Name of the gateway
-#define _EMAIL "mw12554@hotmail.com"		// Owner
-#define _PLATFORM "ESP8266"
+#define _EMAIL "enzocardeal@usp.br"		// Owner
+#define _PLATFORM "ESP32"
 #define _LAT 52.0
 #define _LON 5.0
 #define _ALT 1								// Altitude
@@ -260,8 +260,7 @@ struct wpas {
 //
 wpas wpa[] = {
 	{ "" , "" },							// Reserved for WiFi Manager
-	{ "fire", "water" },
-	{ "ape", "beer" }
+	{ "iPhone de Enzo", "enzo1234" }
 };
 
 // For asserting and testing the following defines are used.

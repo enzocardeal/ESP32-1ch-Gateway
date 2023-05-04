@@ -43,6 +43,7 @@ void id_print (String id, String val) {
 // to well known settings.
 // ----------------------------------------------------------------------------
 int initConfig(struct espGwayConfig *c) {
+	Serial.println("Estive aqui4.");
 	(*c).ch = 0;
 	(*c).sf = _SPREADING;
 	(*c).debug = 1;
